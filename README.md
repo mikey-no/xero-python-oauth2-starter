@@ -1,5 +1,14 @@
 # xero-python-oauth-starter
 
+-----------------------------
+_MY Addtion 17 Sep 2021_
+Made some minor modifications to make this run via our test account
+1) See I have added the path to the self-signed pki cert and related private files. 
+2) config.py was used to hold the client_id etc. but this was added to .gitignore to 
+ensure it was not retained in a version control repository
+3) Retained the pycharm config files in the commit
+-------------------------
+
 This is a starter app with the code to perform OAuth 2.0 authentication
 
 You'll be able to connect to a Xero Organisation and make real API calls - we recommend you connect to the Demo company.

@@ -45,10 +45,9 @@ xero = oauth.remote_app(
     access_token_url="https://identity.xero.com/connect/token",
     refresh_token_url="https://identity.xero.com/connect/token",
     scope="offline_access openid profile email accounting.transactions "
-    "accounting.reports.read accounting.journals.read accounting.settings "
-    "accounting.contacts accounting.attachments assets projects",
+          "accounting.reports.read accounting.journals.read accounting.settings "
+          "accounting.contacts accounting.attachments assets projects",
 )  # type: OAuth2Application
-
 
 # configure xero-python sdk client
 api_client = ApiClient(
@@ -287,4 +286,6 @@ def get_xero_tenant_id():
 
 
 if __name__ == '__main__':
-    app.run(host='localhost', port=5000)
+    key = r'..\..\test\localhost_private_key.pem'
+    cert = r'..\..\test\localhost_cert.pem'
+    app.run(host='localhost', port=5000, ssl_context=(cert, key))
